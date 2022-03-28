@@ -1,0 +1,43 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  margin-bottom: 15px;
+}
+.screen-header__title {
+  font-size: 32px;
+  font-weight: 600;
+}
+.screen-header__icons span {
+  margin-left: 25px;
+}
+.friends-screen {
+  padding: 0px var(--horizontal-space);
+}
+.screen-header__icons{
+  position: relative;
+}
+.gear__plus {
+  background-color: tomato;
+  width: 7px;
+  height: 7px;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  right: -5px;
+  top: -10px;
+}
+
+@keyframes rotateGear {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-gear:hover {
+  animation: rotateGear 1s ease-in-out infinite;
+}

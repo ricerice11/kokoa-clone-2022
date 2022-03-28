@@ -1,0 +1,44 @@
+.settings__setting {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settings__setting i {
+  opacity: 0.8;
+  margin-right: 20px;
+  font-size: 22px;
+}
+.settings__setting-column:last-child {
+  opacity: 0.7;
+}
+
+
+@keyframes leftMove {
+  0%{
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    
+    transform: translateX(0);
+  }
+}
+
+.settings__setting {
+  animation: leftMove 1s ease-in-out forwards;
+}
+.settings__setting:nth-child(2){
+  opacity: 0;
+  animation-delay: .1s;
+}
+.settings__setting:last-child {
+  opacity: 0;
+  animation-delay: .2s;
+}
